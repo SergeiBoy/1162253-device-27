@@ -2,11 +2,75 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <title>Интернет-магазин Девайс</title>
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="header-logo">
+          <img src="img/device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс» - его название английскими буквами">
+        </a>
+        <ul class="user-navigation reset-list">
+          <li>
+            <form class="nav-search-form" action="index.html" method="get">
+              <input class="nav-search-input" type="text" name="search" placeholder="Поиск по сайту">
+              <button type="submit">Найти</button>
+            </form>
+          </li>
+          <li>
+            <ul class="user-navigation-sub-menu reset-list">
+              <li><a class="enter" href="#">Войти</a></li>
+              <li><a class="quit quit-hidden" href="#">Выйти</a></li>
+              <li><a class="compare" href="#">Сравнить</a></li>
+              <li><a class="basket" href="#">Корзина</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="shop-navigation reset-list">
+          <li>
+            <a class="goods-catalog" href="#">Каталог товаров</a>
+            <ul class="hidden-list reset-list">
+              <li>
+                <ul class="first-column reset-list">
+                  <li><a href="#">Виртуальная реальность</a></li>
+                  <li><a href="#">Моноподы для селфи</a></li>
+                  <li><a href="#">Экшн-камеры</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul class="second-column reset-list">
+                  <li><a href="#">Фитнес-браслеты</a></li>
+                  <li><a href="#">Умные часы</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul class="third-column reset-list">
+                  <li><a href="#">Квадрокоптеры</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="shop-navigation-sub-menu reset-list">
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Гарантия</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+      <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
 
+      <section class="slider">
+      </section>
+
+    </main>
+    <footer class="main-footer">
+    </footer>
   </body>
 </html>

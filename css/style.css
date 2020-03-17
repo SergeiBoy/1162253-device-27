@@ -1,0 +1,359 @@
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/gilroylight.woff2") format("woff2"), 
+       url("../fonts/gilroylight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"), 
+       url("../fonts/gilroyextrabold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/opensanslight.woff2") format("woff2"), 
+       url("../fonts/opensanslight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/opensans.woff2") format("woff2"), 
+       url("../fonts/opensans.woff") format("woff");
+}
+
+body {
+  margin: 0;
+
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.reset-list {
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-header {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  width: 1160px;
+  min-height: 186px;
+  padding: 0 20px;
+
+  background-color: #f7e296;
+  background-clip: content-box;
+}
+
+.main-navigation {
+  position: relative;
+
+  padding-top: 34px;
+}
+
+.header-logo {
+  position: absolute;
+  top: -19px;
+  left: 59px;
+}
+
+.user-navigation {
+  margin-right: 60px;
+  margin-left: 63px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.15px;
+}
+
+.nav-search-form {
+  position: relative;
+
+  display: flex;
+  padding-left: 35px;
+}
+
+.nav-search-input {
+  margin-right: 135px;
+
+  border: none;
+  background-color: inherit;
+}
+
+.nav-search-form::before {
+  content: "";
+
+  position: absolute;
+  top: 17px;
+  left: 0;
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.nav-search-input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-search-input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-search-input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-search-form button {
+  box-sizing: border-box;
+  width: 85px;
+  height: 49px;
+
+  font-size: 0;
+
+  border: none;
+  background-color: inherit;
+}
+
+.nav-search-input:focus + button {
+  font-size: 15px;
+
+  border: 2px solid #000000;
+}
+
+.user-navigation-sub-menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 600px;
+}
+
+.user-navigation-sub-menu li {
+  position: relative;
+
+  padding-left: 35px;
+}
+
+.user-navigation-sub-menu li:nth-child(1) {
+  width: 150px;
+}
+
+.user-navigation-sub-menu li:nth-child(2) {
+  width: 95px;
+  padding: 0;
+}
+
+.user-navigation-sub-menu li:nth-child(3) {
+  width: 98px;
+}
+
+.user-navigation-sub-menu li:nth-child(n+5) {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.enter::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.quit {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.quit-hidden {
+  display: none;
+}
+
+.compare::before {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 15px;
+
+  width: 10px;
+  height: 10px;
+
+  background-image: url("../img/compare.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.basket::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 12px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.shop-navigation {
+  margin-top: 32px;
+  margin-right: 56px;
+  margin-left: 59px;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+}
+
+.shop-navigation a {
+  text-transform: uppercase;
+}
+
+.goods-catalog {
+  position: relative;
+}
+
+.goods-catalog::after {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: 231px;
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/plus.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.hidden-list {
+  position: absolute;
+  left: 0;
+
+  display: none;
+  box-sizing: border-box;
+  width: 1160px;
+  padding: 24px 60px 34px 60px;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  letter-spacing: 0.15px;
+
+  background-color: #f7e296;
+}
+
+.hidden-list .first-column {
+  min-width: 240px;
+}
+
+.hidden-list .second-column {
+  min-width: 200px;
+}
+
+.goods-catalog:hover ~ .hidden-list,
+.hidden-list:hover {
+  display: flex;
+}
+
+.hidden-list a {
+  text-transform: none;
+}
+
+.shop-navigation-sub-menu {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+}
+
+.shop-navigation-sub-menu li:nth-child(1) {
+  width: 158px;
+}
+
+.shop-navigation-sub-menu li:nth-child(2) {
+  width: 224px;
+}
+
+.shop-navigation-sub-menu li:nth-child(n+4) {
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Общие правила:  */
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
