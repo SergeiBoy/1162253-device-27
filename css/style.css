@@ -54,6 +54,8 @@ img {
   list-style: none;
 }
 
+/* Навигация */
+
 .main-header {
   position: relative;
   margin: 0 auto;
@@ -102,10 +104,10 @@ img {
 }
 
 .nav-search-input {
-  margin-right: 135px;
+  margin-right: 139px;
 
   border: none;
-  background-color: inherit;
+  background-color: #f7e296;
 }
 
 .nav-search-form::before {
@@ -135,14 +137,40 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.nav-search-input:hover::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-search-input:hover::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-search-input:hover::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-search-input:focus::-moz-placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+.nav-search-input:focus::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+.nav-search-input:focus::placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
 .nav-search-form button {
+  position: relative;
+
   box-sizing: border-box;
   width: 85px;
   height: 49px;
 
   font-size: 0;
 
-  border: none;
+  border: 2px solid #f7e296;
   background-color: inherit;
 }
 
@@ -152,11 +180,42 @@ img {
   border: 2px solid #000000;
 }
 
+.nav-search-input:focus + button::after,
+.nav-search-input + button:focus::after {
+  content: "";
+
+  position: absolute;
+  top: 45px;
+  left: -360px;
+
+  width: 441px;
+  height: 2px;
+
+  background-color: #000000;
+}
+
+.nav-search-input:focus + button:hover,
+.nav-search-form button:focus {
+  font-size: 15px;
+  color: #ffffff;
+
+  border: 2px solid #000000;
+  background-color: #000000;
+}
+
+.nav-search-form button:active {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.3);
+
+  border: 2px solid #000000;
+  background-color: #000000;
+}
+
 .user-navigation-sub-menu {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  width: 600px;
+  width: 550px;
 }
 
 .user-navigation-sub-menu li {
@@ -255,15 +314,15 @@ img {
   text-transform: uppercase;
 }
 
-.goods-catalog {
+.goods-catalog-wrapper {
   position: relative;
 }
 
-.goods-catalog::after {
+.goods-catalog-wrapper::after {
   content: "";
 
   position: absolute;
-  top: 4px;
+  top: 1px;
   left: 231px;
 
   width: 16px;
@@ -278,6 +337,7 @@ img {
 .hidden-list {
   position: absolute;
   left: 0;
+  z-index: 5;
 
   display: none;
   box-sizing: border-box;
@@ -301,7 +361,7 @@ img {
   min-width: 200px;
 }
 
-.goods-catalog:hover ~ .hidden-list,
+.goods-catalog-wrapper:hover ~ .hidden-list,
 .hidden-list:hover {
   display: flex;
 }
@@ -329,9 +389,127 @@ img {
   text-align: center;
 }
 
+.main-navigation a:not(.on-main-page):hover,
+.main-navigation a:not(.on-main-page):focus {
+  opacity: 0.6;
+}
+
+.main-navigation a:not(.on-main-page):active {
+  opacity: 0.3;
+}
+
+
+/* Слайдер */
+
+.slider {
+  position: relative;
+  margin: 0 auto;
+
+  width: 1160px;
+  padding: 0 20px;
+}
+
+.decoration-wrapper {
+  position: relative;
+
+  width: 1160px;
+  min-height: 113px;
+
+  background-color: #f7e296;
+  overflow: hidden;
+}
+
+.decoration-wrapper::before {
+  content: "";
+
+  position: absolute;
+  bottom: 67px;
+  right: 460px;
+
+  width: 100px;
+  height: 7px;
+
+  background-color: #ffffff;
+}
+
+.decoration-wrapper::after {
+  content: "01";
+
+  position: absolute;
+  bottom: -5px;
+  right: 65px;
+
+  width: 166px;
+  height: 131px;
+
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 179px;
+  line-height: 179px;
+  font-weight: 800;
+  letter-spacing: 1.79px;
+  color: #ffffff;
+}
+
+.slider-slide-wrapper {
+  position: relative;
+  margin-top: -110px;
+
+  display: none;
+  width: 1160px;
+  min-height: 500px;
+}
 
 
 
+
+
+
+
+
+.slider-controls {
+  position: absolute;
+  bottom: 162px;
+  right: 103px;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  width: 78px;
+}
+
+.slider-controls label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 10px;
+  height: 10px;
+
+  font-size: 0;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+  background-color: #ffffff;  
+}
+
+.slider-control-1:checked ~ .slider-controls label[for="slider-control-1"]::before,
+.slider-control-2:checked ~ .slider-controls label[for="slider-control-2"]::before,
+.slider-control-3:checked ~ .slider-controls label[for="slider-control-3"]::before {
+  content: "";
+
+  display: block;
+  width: 3px;
+  height: 3px;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.slider-control-1:checked ~ .first-slide,
+.slider-control-2:checked ~ .second-slide,
+.slider-control-3:checked ~ .third-slide {
+  display: flex;
+}
 
 
 
