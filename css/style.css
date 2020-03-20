@@ -828,6 +828,7 @@ img {
 .slider-2-slide-wrapper {
   display: none;
   justify-content: space-between;
+  align-items: flex-start;
   width: 760px;
 }
 
@@ -861,17 +862,17 @@ img {
 }
 
 .slider-2-first-slide img {
-  top: -5px;
+  top: 12px;
 }
 
 .slider-2-second-slide img {
-  top: -15px;
-  left: 19px;
+  top: -12px;
+  left: 20px;
 }
 
 .slider-2-third-slide img {
-  top: -18px;
-  right: 6px;
+  top: -12px;
+  right: 5px;
 }
 
 .slider-2-control-1:checked ~ .slider-2-controls label[for="slider-2-control-1"],
@@ -896,6 +897,43 @@ img {
 .slider-2-control-3:checked ~ .slider-2-third-slide {
   display: flex;
 }
+
+
+/* Логотипы компаний */
+
+.companies-logo {
+  margin: 0 auto;
+  margin-top: 95px;
+
+  width: 1160px;
+  padding: 0 20px;
+}
+
+.list-companies-logo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list-companies-logo a {
+  display: block;
+  width: 260px;
+  height: 100px;
+}
+
+.logo-link-to-company .logo-color {
+  display: none;
+}
+
+.logo-link-to-company:hover .logo-color {
+  display: block;
+}
+
+.logo-link-to-company:hover .logo-non-color {
+  display: none;
+}
+
+
 
 
 
