@@ -262,10 +262,6 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.quit-hidden {
-  display: none;
-}
-
 .compare::before {
   content: "";
 
@@ -934,10 +930,391 @@ img {
 }
 
 
+/* Информация о компании */
+
+.company-information {
+  margin: 0 auto;
+  margin-top: 93px;
+
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  padding: 0 20px;
+}
+
+.company-information div {
+  position: relative;
+
+  width: 560px;
+}
+
+.company-information div::before {
+  content: "";
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #000000;
+}
+
+.company-information h3 {
+  margin-top: 52px;
+  margin-bottom: 43px;
+
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: 0.47px;
+}
+
+.company-information p {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #464646;
+}
+
+.about-us p {
+  margin-bottom: 30px;
+
+  width: 480px;
+}
+
+.our-contacts p {
+  margin-bottom: 39px;
+}
+
+.forwarders-list {
+  margin-top: 66px;
+  margin-bottom: 54px;
+
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+  letter-spacing: 0.47px;
+}
+
+.forwarders-list li {
+  position: relative;
+
+  padding-left: 35px;
+}
+
+.forwarders-list a::before {
+  content: "";
+
+  position: absolute;
+  top: 15px;
+  left: 0px;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+  border: 2px solid #e5e5e5;
+}
+
+.forwarders-list a:hover,
+.forwarders-list a:focus {
+  opacity: 0.6;
+}
+
+.forwarders-list a:active {
+  opacity: 0.3;
+}
+
+.our-contacts img {
+  margin-bottom: 65px;
+}
+
+.company-information .more-information,
+.company-information .write-us {
+  position: relative;
+  margin-bottom: 40px;
+
+  display: block;
+  width: 260px;
+  height: 40px;
+
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: none;
+}
+
+.more-information::after,
+.write-us::after {
+  content: "";
+
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  z-index: -1;
+
+  width: 260px;
+  height: 8px;
+
+  background-color: #f0c52e;
+}
+
+.more-information:hover,
+.write-us:hover,
+.more-information:focus,
+.write-us:focus {
+  background-color: #f0c52e;
+}
+
+.more-information:active,
+.write-us:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* Футер */
+
+.main-footer {
+  margin-top: 42px;
+
+  min-height: 323px;
+
+  background-color: #464646;
+}
+
+.footer-navigation {
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  padding: 0 20px;
+}
+
+.footer-user-navigation-wrapper {
+  margin-top: 65px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-user-navigation {
+  margin-top: -6px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 335px;
+  max-width: 700px;
+}
+
+.footer-user-navigation li {
+  position: relative;
+
+  padding-left: 35px;
+}
+
+.footer-user-navigation a {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  letter-spacing: 0.15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-enter::before {
+  content: "";
+
+  position: absolute;
+  top: 13px;
+  left: 10px;
+
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/user-yellow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.footer-quit {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-compare::before {
+  content: "";
+
+  position: absolute;
+  top: 14px;
+  left: 15px;
+
+  width: 10px;
+  height: 10px;
+
+  background-image: url("../img/compare-yellow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.footer-basket::before {
+  content: "";
+
+  position: absolute;
+  top: 13px;
+  left: 14px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/cart-yellow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.footer-user-navigation {
+  display: flex;
+}
+
+.footer-shop-navigation-wrapper {
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+}
+
+.footer-shop-navigation-wrapper .address,
+.footer-shop-navigation-wrapper .tel {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.footer-shop-navigation {
+  margin-top: 22px;
+  margin-right: 37px;
+
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 630px;
+}
+
+.footer-shop-navigation li {
+  margin-bottom: 15px;
+
+  padding: 0 17px;
+}
+
+.footer-shop-navigation a {
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.social-icons-wrapper {
+  position: relative;
+  margin-top: 48px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons-wrapper .link-to-htmlacademy {
+  position: absolute;
+  right: 0;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+
+.social-icons-wrapper::before {
+  content: "";
+
+  position: absolute;
+  top: 13px;
+  left: 0;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #ffc600;
+}
+
+.social-icons a {
+  margin: 0 11px;
+
+  display: block;
+
+  font-size: 0;
+}
+
+.facebook::before {
+  content: "";
+
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.instagram::before {
+  content: "";
+
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url("../img/instagram-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.twitter::before {
+  content: "";
+
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  background-image: url("../img/twitter-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
 
 
 
 /* Общие правила */
+
+.display-none {
+  display: none;
+}
 
 .visually-hidden {
   position: absolute;
