@@ -291,5 +291,26 @@
         </div>
       </nav>
     </footer>
+
+    <section class="modal-message">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <button class="close-cross" type="button">Закрыть</button>
+      <form class="message-form" action="index.html" method="post">
+        <p>
+          <label for="message-name">Ваше имя:</label>
+          <input type="text" name="name" placeholder="Имя Фамилия" id="message-name" pattern="^[А-Яа-яЁё\s]+$">
+        </p>
+        <p>
+          <label for="message-email">Ваш e-mail:</label>
+          <input type="email" name="email" placeholder="email@example.com" id="message-email">
+        </p>
+        <p>
+          <label for="message-text">Текст письма:</label>
+          <textarea name="text" placeholder="В свободной форме" id="message-text"></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -1346,6 +1346,274 @@ img {
 }
 
 
+/* Модальное окно сообщения */
+
+.modal-message {
+  position: fixed;
+  top: 140px;
+  left: 50%;
+  margin-left: -480px;
+  z-index: 20;
+
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 960px;
+  height: 553px;
+  padding: 22px 100px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+
+  transform: translateY(-2000px);
+}
+
+.modal-message-show {
+  transform: translateY(0);
+
+  animation: bounce 0.6s;
+}
+
+.modal-message-close {
+  animation: bounce 0.6s;
+  animation-direction: reverse;
+}
+
+.modal-message-error {
+  animation: shake 0.6s;
+}
+
+.modal-message .close-cross {
+  margin-right: -100px;
+  margin-left: 783px;
+
+  width: 55px;
+  height: 55px;
+
+  font-size: 0;
+
+  border: none;
+  background-image: url("../img/modal-close-cross.svg");
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+
+.close-cross:hover,
+.close-cross:focus {
+  opacity: 1;
+}
+
+.close-cross:active {
+  opacity: 0.3;
+}
+
+.message-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message-form p:first-child {
+  margin-right: 40px;
+  margin-bottom: 17px;
+}
+
+.message-form p:nth-child(3) {
+  margin-bottom: 37px;
+}
+
+.message-form label {
+  margin-bottom: 7px;
+
+  display: block;
+
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.message-form input {
+  box-sizing: border-box;
+  width: 360px;
+  height: 50px;
+  padding: 7px 17px;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  color: #464646;
+
+  border: 3px solid #f2f2f2;
+  background-color: #f2f2f2;
+}
+
+.message-form textarea {
+  box-sizing: border-box;
+  width: 760px;
+  height: 156px;
+  padding: 12px 17px;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  color: #464646;
+
+  border: 3px solid #f2f2f2;
+  background-color: #f2f2f2;
+  resize: none;
+}
+
+.message-form input:hover,
+.message-form textarea:hover {
+  border-color: #eaeaea;
+  background-color: #eaeaea;
+}
+
+.message-form input:focus,
+.message-form textarea:focus {
+  border-color: #f7e296;
+  background-color: #ffffff;
+}
+
+.message-form input:invalid {
+  border-color: #f6dada;
+  background-color: #f6dada;
+}
+
+.message-form input::-moz-placeholder {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  color: rgba(70, 70, 70, 0.5);
+}
+
+.message-form input::-webkit-input-placeholder {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  color: rgba(70, 70, 70, 0.5);
+}
+
+.message-form input::placeholder {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  color: rgba(70, 70, 70, 0.5);
+}
+
+.message-form textarea::-moz-placeholder {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  color: rgba(70, 70, 70, 0.5);
+}
+
+.message-form textarea::-webkit-input-placeholder {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  color: rgba(70, 70, 70, 0.5);
+}
+
+.message-form textarea::placeholder {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  color: rgba(70, 70, 70, 0.5);
+}
+
+.message-form button {
+  position: relative;
+
+  width: 200px;
+  height: 40px;
+
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+
+  border: none;
+  background-color: transparent;
+}
+
+.message-form button::after {
+  content: "";
+
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  z-index: -1;
+
+  width: 200px;
+  height: 8px;
+
+  background-color: #f0c52e;
+}
+
+.message-form button:hover,
+.message-form button:focus {
+  background-color: #f0c52e;
+}
+
+.message-form button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+
+
+
 /* Общие правила */
 
 .display-none {
