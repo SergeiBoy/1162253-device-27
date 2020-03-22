@@ -1112,14 +1112,13 @@ img {
   margin-top: -6px;
 
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  min-width: 335px;
   max-width: 700px;
 }
 
 .footer-user-navigation li {
   position: relative;
+  margin-left: 28px;
 
   padding-left: 35px;
 }
@@ -1131,6 +1130,10 @@ img {
   font-weight: 300;
   letter-spacing: 0.15px;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-user-navigation .footer-quit {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-enter::before {
@@ -1148,8 +1151,9 @@ img {
   background-position: 0 0;
 }
 
-.footer-quit {
-  color: rgba(0, 0, 0, 0.3);
+.footer-user-navigation .footer-quit-wrapper {
+  padding: 0;
+  margin-left: 20px;
 }
 
 .footer-compare::before {
@@ -1180,10 +1184,6 @@ img {
   background-image: url("../img/cart-yellow.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-}
-
-.footer-user-navigation {
-  display: flex;
 }
 
 .footer-shop-navigation-wrapper {
@@ -1242,6 +1242,8 @@ img {
 }
 
 .social-icons {
+  margin-bottom: 45px;
+
   display: flex;
   flex-wrap: wrap;
   max-width: 500px;
@@ -1261,7 +1263,7 @@ img {
 }
 
 .social-icons a {
-  margin: 0 11px;
+  margin: 0 11px 22px 11px;
 
   display: block;
 
@@ -1307,7 +1309,41 @@ img {
   opacity: 0.3;
 }
 
+.main-footer a:not(.decoration):hover,
+.footer-user-navigation a:hover::before,
+.social-icons a:hover::before,
+.main-footer a:not(.decoration):focus,
+.footer-user-navigation a:focus::before,
+.social-icons a:focus::before {
+  opacity: 0.6;
+}
 
+.main-footer a:not(.decoration):active,
+.footer-user-navigation a:active::before {
+  opacity: 0.3;
+}
+
+.social-icons a:active::before {
+  opacity: 0.1;
+}
+
+.footer-user-navigation a:hover,
+.footer-user-navigation a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer-user-navigation a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-quit-wrapper .footer-quit:hover,
+.footer-quit-wrapper .footer-quit:focus {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-quit-wrapper .footer-quit:active {
+  color: rgba(255, 255, 255, 0.3);
+}
 
 
 /* Общие правила */
