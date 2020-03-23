@@ -13,11 +13,11 @@ var isStorageSupport = true;
 var storageName = "";
 var storageEmail = "";
 
-/*
-var mapAddress = document.querySelector(".map .google-map");
-var mapWrapper = document.querySelector(".map .map-wrapper");
-var width = document.documentElement.clientWidth;
-*/
+var mapButton = document.querySelector(".our-contacts img");
+var mapPopup = document.querySelector(".modal-map-wrapper");
+var mapInPopup = mapPopup.querySelector(".modal-map");
+var mapClose = mapPopup.querySelector(".close-cross-map");
+
 
 try {
   storageName = localStorage.getItem("name");
@@ -83,16 +83,27 @@ window.addEventListener("keydown", function (evt) {
       personName.required = false;
       email.required = false;
     }
+    if (mapPopup.style.display === "flex") {
+      mapPopup.style.display = "none";
+    }
   }
 });
 
-/*
+
+mapButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.style.display = "flex";
+});
+
+mapClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.style.display = "none";
+});
+
 function initMap() {
-  var uluru = {lat: 59.938872, lng: 30.323047};
-  var map = new google.maps.Map(mapAddress, {zoom: 17, center: uluru});
+  var uluru = {lat: 55.686995, lng: 37.529564};
+  var map = new google.maps.Map(mapInPopup, {zoom: 17, center: uluru});
   var marker = new google.maps.Marker({position: uluru, map: map});
-  mapAddress.style.zIndex = 1;
-  mapWrapper.style.display = "none";
 };
 
 var script = document.createElement("script");
@@ -101,19 +112,4 @@ script.async = true;
 script.defer = true;
 document.body.appendChild(script);
 
-if (width > 1200) {
-  mapAddress.style.width = width + "px";
-  mapAddress.style.marginLeft = -(width/2) + "px";
-}
 
-window.addEventListener("resize", function (evt) {
-  var width = document.documentElement.clientWidth;
-  if (width > 1200) {
-    mapAddress.style.width = width + "px";
-    mapAddress.style.marginLeft = -(width/2) + "px";
-  } else {
-    mapAddress.style.width = "1200px";
-    mapAddress.style.marginLeft = "-600px";
-  }
-});
-*/
