@@ -84,11 +84,15 @@
           <div class="sorting">
             <h3>Сортировка:</h3>
             <div class="links-wrapper">
-              <a class="active" href="#">По цене</a>
-              <a href="#">По типу</a>
-              <a href="#">По популярности</a>
-              <a class="ascending" href="#" aria-label="По возрастанию"></a>
-              <a class="descending active" href="#" aria-label="По убыванию"></a>
+              <div class="links-text-wrapper">
+                <a class="active" href="#">По цене</a>
+                <a href="#">По типу</a>
+                <a href="#">По популярности</a>
+              </div>
+              <div class="links-up-down-arrows-wrapper">
+                <a class="ascending" href="#" aria-label="По возрастанию"></a>
+                <a class="descending active" href="#" aria-label="По убыванию"></a>
+              </div>
             </div>
           </div>
         </div>
@@ -98,7 +102,7 @@
         <div class="wrapper-filter">
           <form class="filter" action="catalog.html" method="get">
             <fieldset class="filter-item">
-              <legend class="big-letter-spacing">Стоимость:</legend>
+              <legend>Стоимость</legend>
               <div class="range-filter">
                 <div class="range-controls">
                   <div class="scale">
@@ -109,7 +113,7 @@
                 </div>
                 <div class="price-controls">
                   <label class="min-price">от <input type="text" name="min-price" value="0" aria-label="Минимальная цена"></label>
-                  <label class="max-price">до <input type="text" name="max-price" value="15 000" aria-label="Максимальная цена"></label>
+                  <label class="max-price">до <input type="text" name="max-price" value="5000" aria-label="Максимальная цена"></label>
                 </div>
               </div>
             </fieldset>
