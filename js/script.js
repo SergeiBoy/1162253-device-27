@@ -13,7 +13,7 @@ var isStorageSupport = true;
 var storageName = "";
 var storageEmail = "";
 
-var mapButton = document.querySelector(".our-contacts img");
+var mapButton = document.querySelector(".our-contacts .map-address");
 var mapPopup = document.querySelector(".modal-map-wrapper");
 var mapInPopup = mapPopup.querySelector(".modal-map");
 var mapClose = mapPopup.querySelector(".close-cross-map");
