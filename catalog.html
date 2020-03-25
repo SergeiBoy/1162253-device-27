@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Интернет-магазин Девайс</title>
     <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -163,50 +163,70 @@
             <h2 class="visually-hidden">Выбранные товары</h2>
             <ul class="catalog reset-list">
               <li class="catalog-item">
-                <img src="img/catalog-item-1.jpg" width="360" height="380" alt="Селфи-палка с мобильным телефоном на ней">
-                <p><a href="#">Любительская селфи-палка</a></p>
-                <p>500 руб.</p>
-                <div class="modal-order-compare" tabindex="0">
-                  <button type="button">В корзину</button>
-                  <button type="button">Добавить к сравнению</button>
+                <div class="wrapper-img-modal">
+                  <img src="img/catalog-item-1.jpg" width="360" height="380" alt="Селфи-палка с мобильным телефоном на ней">
+                  <div class="modal-order-compare">
+                    <button type="button">В корзину</button>
+                    <button type="button">Добавить к сравнению</button>
+                  </div>
+                </div>
+                <div class="good-text-wrapper">
+                  <p><a href="#">Любительская селфи-палка</a></p>
+                  <p>500 руб.</p>
                 </div>
               </li>
               <li class="catalog-item">
-                <img src="img/catalog-item-2.jpg" width="360" height="380" alt="Селфи-палка">
-                <p><a href="#">Профессиональная селфи-палка </a></p>
-                <p>1 500 руб.</p>
-                <div class="modal-order-compare" tabindex="0">
-                  <button type="button">В корзину</button>
-                  <button type="button">Добавить к сравнению</button>
+                <div class="wrapper-img-modal">
+                  <img src="img/catalog-item-2.jpg" width="360" height="380" alt="Селфи-палка">
+                  <div class="modal-order-compare">
+                    <button type="button">В корзину</button>
+                    <button type="button">Добавить к сравнению</button>
+                  </div>
+                </div>
+                <div class="good-text-wrapper">
+                  <p><a href="#">Профессиональная селфи-палка</a></p>
+                  <p>1 500 руб.</p>
                 </div>
               </li>
               <li class="catalog-item">
-                <img src="img/catalog-item-3.jpg" width="360" height="380" alt="Селфи-палка с мобильным телефоном на ней">
-                <p><a href="#">Непотопляемая селфи-палка</a></p>
-                <p>2 500 руб.</p>
-                <div class="modal-order-compare" tabindex="0">
-                  <button type="button">В корзину</button>
-                  <button type="button">Добавить к сравнению</button>
+                <div class="wrapper-img-modal">
+                  <img src="img/catalog-item-3.jpg" width="360" height="380" alt="Селфи-палка с мобильным телефоном на ней">
+                  <div class="modal-order-compare">
+                    <button type="button">В корзину</button>
+                    <button type="button">Добавить к сравнению</button>
+                  </div>
+                </div>
+                <div class="good-text-wrapper">
+                  <p><a href="#">Непотопляемая селфи-палка</a></p>
+                  <p>2 500 руб.</p>
                 </div>
               </li>
-              <li class="catalog-item">
-                <img src="img/catalog-item-4.jpg" width="360" height="380" alt="Селфи-палка в виде руки с мобильным телефоном на ней">
-                <p><a href="#">Селфи-палка «Следуй за мной»</a></p>
-                <p>4 900 руб.</p>
-                <div class="modal-order-compare" tabindex="0">
-                  <button type="button">В корзину</button>
-                  <button type="button">Добавить к сравнению</button>
+              <li class="catalog-item new">
+                <div class="wrapper-img-modal">
+                  <img src="img/catalog-item-4.jpg" width="360" height="380" alt="Селфи-палка в виде руки с мобильным телефоном на ней">
+                  <div class="modal-order-compare">
+                    <button type="button">В корзину</button>
+                    <button type="button">Добавить к сравнению</button>
+                  </div>
+                </div>
+                <div class="good-text-wrapper">
+                  <p><a href="#">Селфи-палка «Следуй за мной»</a></p>
+                  <p>4 900 руб.</p>
                 </div>
               </li>
             </ul>
             <div class="page-listing-wrapper">
               <h3 class="visually-hidden">Перечень страниц каталога</h3>
               <ul class="page-listing reset-list">
-                <li><a class="back" href="#">Назад</a></li>
-                <li><a class="active">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a class="forward" href="#">Вперед</a></li>
+                <li><a class="navigation-direction forward" href="#">Назад</a></li>
+                <li>
+                  <ul class="wrapper-page-numbers reset-list">
+                    <li><a class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                  </ul>
+                </li>
+                <li><a class="navigation-direction back" href="#">Вперед</a></li>
               </ul>
             </div>
           </section>
