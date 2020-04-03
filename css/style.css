@@ -2,7 +2,7 @@
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/gilroylight.woff2") format("woff2"), 
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
        url("../fonts/gilroylight.woff") format("woff");
 }
 
@@ -10,7 +10,7 @@
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 800;
-  src: url("../fonts/gilroyextrabold.woff2") format("woff2"), 
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
        url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
@@ -18,7 +18,7 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/opensanslight.woff2") format("woff2"), 
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
        url("../fonts/opensanslight.woff") format("woff");
 }
 
@@ -26,7 +26,7 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/opensans.woff2") format("woff2"), 
+  src: url("../fonts/opensans.woff2") format("woff2"),
        url("../fonts/opensans.woff") format("woff");
 }
 
@@ -334,9 +334,10 @@ img {
 .hidden-list {
   position: absolute;
   left: 0;
+  bottom: 2000px;
   z-index: 5;
 
-  display: none;
+  display: flex;
   box-sizing: border-box;
   width: 1160px;
   padding: 24px 60px 34px 60px;
@@ -359,8 +360,9 @@ img {
 }
 
 .goods-catalog-wrapper:hover ~ .hidden-list,
-.hidden-list:hover {
-  display: flex;
+.hidden-list:hover,
+.hidden-list:focus-within {
+  bottom: auto;
 }
 
 .hidden-list a {
@@ -611,7 +613,7 @@ img {
 
   border: 1px solid #000000;
   border-radius: 50%;
-  background-color: #ffffff;  
+  background-color: #ffffff;
 }
 
 .slider-control-1:checked ~ .slider-controls label[for="slider-control-1"]::before,
@@ -999,31 +1001,21 @@ img {
   margin-top: 66px;
   margin-bottom: 54px;
 
+  padding-left: 20px;
+
   font-family: Gilroy, Arial, sans-serif;
   font-size: 16px;
   line-height: 40px;
   font-weight: 800;
   letter-spacing: 0.47px;
+
+  list-style: circle;
 }
 
 .forwarders-list li {
   position: relative;
 
-  padding-left: 35px;
-}
-
-.forwarders-list a::before {
-  content: "";
-
-  position: absolute;
-  top: 15px;
-  left: 0;
-
-  width: 4px;
-  height: 4px;
-
-  border-radius: 50%;
-  border: 2px solid #e5e5e5;
+  padding-left: 15px;
 }
 
 .forwarders-list a:hover,
